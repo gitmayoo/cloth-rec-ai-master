@@ -187,8 +187,8 @@ const WebCamComp = ({ webCamData, name }: any) => {
               setfaceTone(user["facetone"]);
               auth.setUser({
                 ...auth.user,
-                userGender: user["gender"],
-                faceTone: user["facetone"],
+                gender: user["gender"],
+                userTone: user["facetone"],
                 filename: uploadedFileName,
               });
               setredirect(!redirect);

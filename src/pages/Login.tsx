@@ -35,7 +35,8 @@ export default function Login() {
 
       const data = await response.json();
       if (response.ok) {
-        console.log("data is ", data["user_info"]);
+        console.log(data)
+        console.log("data is " , data);
         auth.setIsLoggedIn(!auth.isLoggedIn);
         auth.setUser(data["user_info"]);
         console.log("current user in auth is ", auth.user);

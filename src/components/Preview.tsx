@@ -18,7 +18,9 @@ export default function Preview() {
     // Set a timeout to navigate after 30 seconds
     const timer = setTimeout(() => {
       navigate("/");
-      auth.setUser({}); // Replace '/your-route' with your target route
+      auth.setUser({});
+      auth.setisSignedIn(!auth.isSignedIn)
+      auth.setIsLoggedIn(!auth.isLoggedIn)
     }, 10000); // 30000 ms = 30 seconds
 
     // Cleanup the timeout if the component is unmounted before 30 seconds

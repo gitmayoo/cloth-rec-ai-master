@@ -36,9 +36,13 @@ export default function Profile({
 
   useEffect(() => {
     console.log(auth.user);
+    console.log(auth.setIsLoggedIn)
+    console.log(auth.setIsSignedIn)
+    
+
+
     if (!auth.isLoggedIn) {
       handleUpdateUser(auth.user);
-      console.log("hiii");
     }
   }, [auth.user]);
 
@@ -55,7 +59,7 @@ export default function Profile({
       const data = await response.json();
 
       if (response.status === 200) {
-        console.log("data is send");
+        console.log("user is updated");
       } else {
         console.error(`Error: ${data.error}`);
       }

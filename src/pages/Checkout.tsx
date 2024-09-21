@@ -103,8 +103,12 @@ export default function CheckOut() {
       dressType: type, // or "bottom"
     });
 
+ 
+
     try {
       setLoading(true);
+      // const user = localStorage.getItem()
+      console.log("recommended data is ",recommendedData)
 
       const url =
         colorCategory === "recommended"
